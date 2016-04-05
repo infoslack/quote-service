@@ -8,24 +8,26 @@ It supports the following operations:
 
 The quotes are stored in redis
 
+# Setup
+    $ docker-compose up
 
 # Usage via [cURL](http://curl.haxx.se/)
 
 Get all quotes:
 
-    curl http://localhost:8000/quotes
-     
+    $ curl http://localhost:8000/quotes
+
 Add a quote:
 
-    curl http://localhost:8000/quotes -d "quote=We must be very careful when we give advice to younger people: sometimes they follow it! ~ Edsger W. Dijkstra"
+    $ curl http://localhost:8000/quotes -d "quote=We must be very careful when we give advice to younger people: sometimes they follow it! ~ Edsger W. Dijkstra"
 
-# Usage via [httpie](https://github.com/jkbrzt/httpie) 
+# Usage via [httpie](https://github.com/jkbrzt/httpie)
 
 Get all quotes:
 
-    http http://localhost:8000/quotes
-     
+    $ http http://localhost:8000/quotes
+
 Add a quote:
 
-    http --form http://localhost:8000/quotes quote="We must be very careful when we give advice to younger people: sometimes they follow it! ~ Edsger W. Dijkstra"
+    $ http --form http://localhost:8000/quotes quote="We must be very careful when we give advice to younger people: sometimes they follow it! ~ Edsger W. Dijkstra"
 

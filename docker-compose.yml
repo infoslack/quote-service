@@ -1,4 +1,11 @@
-quote-service:
+service:
+  container_name: quote-service
   build: .
   ports:
-   - "8001:8000"
+   - "8000:8000"
+  links:
+    - redis
+
+redis:
+  container_name: redis
+  image: redis
